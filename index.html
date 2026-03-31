@@ -661,7 +661,11 @@
             <a href="#" class="social-link" aria-label="GitHub" title="GitHub">&#128025;</a>
           </div>
         </div>
-        <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('.btn-submit').textContent='Message sent!'; this.reset();">
+        <form class="contact-form reveal" action="https://formsubmit.co/dennis@londoniac.co.uk" method="POST">
+          <input type="hidden" name="_subject" value="New enquiry from londoniac.co.uk">
+          <input type="hidden" name="_next" value="https://londoniac.github.io/londoniac-website/">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
