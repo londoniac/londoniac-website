@@ -205,6 +205,27 @@
       background: radial-gradient(circle at 30% 50%, rgba(0, 229, 255, 0.2) 0%, transparent 50%),
                   radial-gradient(circle at 70% 50%, rgba(0, 184, 212, 0.15) 0%, transparent 40%);
     }
+    .project-visual--game { background: linear-gradient(135deg, #000a00, #001a00); }
+    .project-visual--game .project-visual-pattern {
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 136, 0.03) 2px, rgba(0, 255, 136, 0.03) 3px),
+        radial-gradient(circle at 50% 30%, rgba(0, 255, 136, 0.08) 0%, transparent 60%);
+    }
+    .game-terminal {
+      position: relative; z-index: 1; width: 85%; font-family: 'Fira Code', monospace;
+      background: rgba(0, 20, 0, 0.8); border: 1px solid rgba(0, 255, 136, 0.2);
+      border-radius: 8px; padding: 1.25rem; box-shadow: 0 0 40px rgba(0, 255, 136, 0.1);
+    }
+    .game-terminal-bar {
+      display: flex; gap: 6px; margin-bottom: 1rem; padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    }
+    .game-terminal-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(0, 255, 136, 0.4); }
+    .game-terminal p {
+      font-size: 0.65rem; color: #00ff88; line-height: 1.8; margin: 0; opacity: 0.85;
+    }
+    .game-terminal .dim { opacity: 0.4; }
+    .game-terminal .bright { color: #00ff88; opacity: 1; text-shadow: 0 0 8px rgba(0, 255, 136, 0.5); }
 
     .project-visual img {
       position: relative; z-index: 1; max-width: 100%; max-height: 240px;
@@ -445,9 +466,9 @@
     <div class="hero-orb hero-orb--2"></div>
     <div class="hero-orb hero-orb--3"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Web Development &middot; Automation &middot; Digital Products</p>
+      <p class="hero-eyebrow">Web Development &middot; Automation &middot; Custom Agents</p>
       <h1>Modern websites for businesses that mean business.</h1>
-      <p class="hero-sub">I&rsquo;m Dennis McCarthy &mdash; 25 years building automated solutions for financial institutions and technology vendors. Now I build fast, professional websites that help local businesses get found and get customers.</p>
+      <p class="hero-sub">I&rsquo;m Dennis McCarthy &mdash; 25 years building automated solutions for financial institutions and technology vendors. Now I build websites, automate processes, and create custom AI agents that help small businesses work smarter.</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
         <a href="#projects" class="btn btn-secondary">See My Work</a>
@@ -463,8 +484,8 @@
         <div class="about-text reveal">
           <p class="section-label">About</p>
           <h2 class="section-title">Enterprise experience. Small business prices.</h2>
-          <p>I&rsquo;ve spent 25 years creating automated solutions across multiple operating systems, services and processes for financial institutions and major technology vendors. That same engineering discipline now goes into every website I build &mdash; whether it&rsquo;s a one-page site for a local caf&eacute; or a full web application.</p>
-          <p>I also build my own products &mdash; an audiobook platform, an IoT smart display, and more. When you work with me, you&rsquo;re getting someone who doesn&rsquo;t just design websites, but builds and ships real software for a living.</p>
+          <p>I&rsquo;ve spent 25 years creating automated solutions across multiple operating systems, services and processes for financial institutions and major technology vendors. That same engineering discipline now goes into every project &mdash; whether it&rsquo;s a website for a local caf&eacute;, a custom AI agent that handles your admin, or accounting software that hooks into Google Sheets.</p>
+          <p>I&rsquo;ve built everything from audiobook platforms and IoT devices to Reddit bots and 3D space combat games. When you work with me, you&rsquo;re getting someone who doesn&rsquo;t just design websites &mdash; I build and ship real software for a living.</p>
         </div>
         <div class="about-stats reveal">
           <div class="stat-card">
@@ -586,6 +607,41 @@
             </div>
             <a href="https://wonder-device.com" target="_blank" rel="noopener" class="project-link">
               Visit wonder-device.com
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- The Black Ship Game -->
+        <div class="project-card reveal">
+          <div class="project-visual project-visual--game">
+            <div class="project-visual-pattern"></div>
+            <div class="game-terminal">
+              <div class="game-terminal-bar">
+                <div class="game-terminal-dot"></div>
+                <div class="game-terminal-dot"></div>
+                <div class="game-terminal-dot"></div>
+              </div>
+              <p class="dim">&gt; SYSTEM: Space Refuse Collector MK-IV</p>
+              <p class="bright">&gt; STATUS: Black transponder active</p>
+              <p class="dim">&gt; MISSION: Intercept House Cayston corvette</p>
+              <p class="bright">&gt; WEAPON: Bio-waste container armed</p>
+              <p class="dim">&gt; OBJECTIVE: Save the Royal Yacht</p>
+              <p class="bright" style="margin-top: 0.5rem;">&gt; LAUNCH GAME? [Y]</p>
+            </div>
+          </div>
+          <div class="project-info">
+            <p class="project-tag">Game &middot; 3D</p>
+            <h3 class="project-name">The Black Ship Game</h3>
+            <p class="project-desc">A 3D space combat game built from scratch. Pilot a garbage hauler through hostile territory, arm bio-waste containers as improvised weapons, and save a Royal Yacht from assassination. Retro terminal aesthetics, real-time flight mechanics.</p>
+            <div class="project-features">
+              <span>3D Browser Game</span>
+              <span>HTML5 Canvas</span>
+              <span>Space Combat</span>
+              <span>Original Story</span>
+            </div>
+            <a href="https://theblackshipgame.com/" target="_blank" rel="noopener" class="project-link">
+              Play the game
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
             </a>
           </div>
