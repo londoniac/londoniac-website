@@ -661,11 +661,7 @@
             <a href="#" class="social-link" aria-label="GitHub" title="GitHub">&#128025;</a>
           </div>
         </div>
-        <form class="contact-form reveal" action="https://formsubmit.co/dennis@londoniac.co.uk" method="POST">
-          <input type="hidden" name="_subject" value="New enquiry from londoniac.co.uk">
-          <input type="hidden" name="_next" value="https://londoniac.github.io/londoniac-website/">
-          <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_captcha" value="false">
+        <form class="contact-form reveal" id="contactForm">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
@@ -697,6 +693,17 @@
   </footer>
 
   <script>
+    // Contact form → opens email client with pre-filled message
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.querySelector('#name').value;
+      const email = this.querySelector('#email').value;
+      const subject = this.querySelector('#subject').value || 'Website enquiry';
+      const message = this.querySelector('#message').value;
+      const body = `Hi Dennis,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`;
+      window.location.href = `mailto:dennis@londoniac.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
     const toggle = document.getElementById('navToggle');
